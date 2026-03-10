@@ -1,0 +1,137 @@
+What is LocalStorage?
+
+LocalStorage is a feature of the browser that allows a website to store data on the user's computer.
+The data is saved as key–value pairs and remains stored even after the page is refreshed or the browser is closed.
+
+It is part of the Web Storage API in JavaScript.
+
+📌 Example:
+A website can remember:
+
+Dark mode preference
+
+User notes
+
+Login information
+
+Shopping cart items
+
+Characteristics of LocalStorage
+
+Data is stored in key–value format
+
+Data persists after refresh
+
+Data does not expire automatically
+
+Only strings can be stored
+
+Storage limit is about 5–10 MB depending on browser
+
+Example:
+
+localStorage.setItem("username", "Sudha");
+
+Here:
+
+Key = "username"
+
+Value = "Sudha"
+
+Basic LocalStorage Functions
+1. setItem()
+
+This function stores data in localStorage.
+
+Syntax
+
+localStorage.setItem(key, value);
+
+Example
+
+localStorage.setItem("name", "Sudha");
+
+This saves the name Sudha in the browser storage.
+
+2. getItem()
+
+This function retrieves data from localStorage.
+
+Syntax
+
+localStorage.getItem(key);
+
+Example
+
+let name = localStorage.getItem("name");
+console.log(name);
+
+Output:
+
+Sudha
+3. removeItem()
+
+This function removes a specific item from localStorage.
+
+Syntax
+
+localStorage.removeItem(key);
+
+Example
+
+localStorage.removeItem("name");
+
+Now the name value is deleted from storage.
+
+4. clear()
+
+This function removes all data stored in localStorage.
+
+Syntax
+
+localStorage.clear();
+
+Example:
+
+localStorage.clear();
+
+This deletes everything stored in localStorage.
+
+Example Program
+<!DOCTYPE html>
+<html>
+<head>
+<title>LocalStorage Example</title>
+</head>
+
+<body>
+
+<button onclick="saveData()">Save Name</button>
+<button onclick="getData()">Get Name</button>
+<button onclick="deleteData()">Delete Name</button>
+
+<script>
+
+function saveData(){
+localStorage.setItem("name","Sudha");
+}
+
+function getData(){
+let name = localStorage.getItem("name");
+alert(name);
+}
+
+function deleteData(){
+localStorage.removeItem("name");
+}
+
+</script>
+
+</body>
+</html>
+Summary
+Function	Purpose
+setItem()	Store data
+getItem()	Retrieve data
+removeItem()	Delete one item
+clear()	Delete all stored data
